@@ -889,6 +889,7 @@ img {
   gap: 16px;
 }
 .footer .footer__wrapper-social .footer__social i {
+  cursor: pointer;
   line-height: 20px;
   border-radius: 100px;
   border: 1px solid #616161;
