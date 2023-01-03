@@ -229,11 +229,10 @@ img {
     border-radius: 5px;
     z-index: 99;
     width: 100vw;
-    height: 100%;
+    min-height: 100vh;
     background-color: #1B004E;
-    padding: 25px 0;
+    padding: 5px 0;
     animation-name: header__hamburger;
-    animation-duration: 0.5s;
     animation-iteration-count: 1s;
     animation-timing-function: ease;
   }
@@ -245,16 +244,15 @@ img {
   .header .header__nav .hamburger ul .header__hamburger--li:hover {
     color: #EB5757;
   }
-  .header .header__nav .hamburger:active .ulll {
+  .header .header__nav .hamburger:hover ul {
     display: flex;
   }
   @keyframes header__hamburger {
     0% {
-      transform: translateX(-100%);
+      transform: translateX(100%);
     }
     100% {
       transform: translateX(0);
-      animation-delay: 5s;
     }
   }
   .header .header__content {

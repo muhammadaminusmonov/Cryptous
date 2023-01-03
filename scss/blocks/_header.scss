@@ -126,11 +126,10 @@
                     border-radius: 5px;
                     z-index: 99;
                     width: 100vw;
-                    height: 100%;
+                    min-height: 100vh;
                     background-color: #1B004E;
-                    padding: 25px 0;
+                    padding: 5px 0;
                     animation-name: header__hamburger;
-                    animation-duration: .5s;
                     animation-iteration-count: 1s;
                     animation-timing-function: ease;
                     .header__hamburger--li {
@@ -143,16 +142,15 @@
                     }
                 }
             }
-            .hamburger:active .ulll {
+            .hamburger:hover ul {
                 display: flex;
             }
             @keyframes header__hamburger {
                 0% {
-                    transform: translateX(-100%);
+                    transform: translateX(100%);
                 }
                 100% {
                     transform: translateX(0);
-                    animation-delay: 5s;
                 }
             }
         }
