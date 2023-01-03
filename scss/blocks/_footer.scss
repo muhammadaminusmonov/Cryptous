@@ -1,0 +1,95 @@
+.footer__bg-color {
+    background: linear-gradient(227.07deg, #4E0062 0.43%, #220076 99.56%);
+}
+
+.footer {
+    padding-top: 81px;
+    padding-bottom: 58px;
+    display: flex;
+    flex-direction: column;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__card {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        h4 {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            color: $bgColor-text-color;
+        }
+        p {
+            font-weight: 400;
+            font-size: 17px;
+            color: #E6E6E6;
+            line-height: 140.5%;
+        }
+    }
+    hr {
+        margin-top: 59px;
+        width: 100%;
+        background-color: #BCBCBC;
+        border: 1px solid #BCBCBC;
+    }
+    .footer__wrapper-social {
+        margin-top: 36px;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 400;
+        color: #BCBCBC;
+        p {
+            font-size: 14px;
+            line-height: 17px;
+        }
+        .footer__social {
+            font-size: 20px;
+            display: flex;
+            gap: 16px;
+            i {
+                line-height: 20px;
+                border-radius: 100px;
+                border: 1px solid #616161;
+            }
+        }
+        .footer__social i:hover {
+            background-color: $hover-color;
+            color: $hover-bg-color;
+        }
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:1024px) {
+    .container {
+        max-width: 343px;
+    }
+    .footer {
+        padding-top: 28px;
+        padding-bottom: 35px;
+        &__wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 150px);
+            justify-content: space-between;
+            row-gap: 30px;
+        }
+        &__card {
+            gap: 20px;
+        }
+        hr {
+            margin-top: 50px;
+        }
+        .footer__wrapper-social {
+            flex-direction: column;
+            align-items: center;
+            gap: 26px;
+            p {
+                order: 2;
+            }
+            .footer__social {
+                order: 1;
+            }
+        }
+    }
+}

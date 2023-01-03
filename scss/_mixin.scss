@@ -4,6 +4,12 @@
     position: relative;
 }
 
+@mixin bg-coloc-p {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 28px;
+}
+
 @mixin background-img {
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,5 +18,26 @@
 
 @mixin table-tr {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    padding-right: 25px;
+    th {
+        display: flex;
+        align-items: center;
+        gap: 7.5px;
+    }
+    border-top: 1px solid #BDBDBD;
+    border-bottom: 1px solid #BDBDBD;
+}
+
+@mixin table-staimg {
+    width: 100px;
+    height: 30px;
+}
+
+@mixin table-bg-text {
+    color: #828282;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 11px;
 }

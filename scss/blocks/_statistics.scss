@@ -1,0 +1,123 @@
+.statistics {
+    font-family: 'Inter', sans-serif;
+    padding-top: 95px;
+    padding-bottom: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    h2 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 48px;
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        i {
+            font-size: 8px;
+        }
+        thead {
+            text-align: center;
+            tr {
+                @include table-tr;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 14px;
+                height: 43px;
+                img {
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+        }
+        tbody {
+            display: flex;
+            flex-direction: column;
+            tr {
+                @include table-tr;
+                height: 85px;
+                .sta__num {
+                    @include table-bg-text;
+                }
+                .sta__comp {
+                    width: 130px;
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 16px;
+                    img {
+                        width: 24px;
+                        height: 24px;
+                    }
+                    span {
+                        @include table-bg-text;
+                    }
+                }
+                .sta__price--alone,
+                .sta__price {
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 14px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    gap: 10px;
+                    span {
+                        @include table-bg-text;
+                    }
+                }
+                .sta__good {
+                    color: #1AFF7C;
+                }
+                .sta__bad {
+                    color: #FF1A1A;
+                }
+                .sta__sta {
+                    @include table-staimg;
+                }
+            }
+        }
+        th {
+            cursor: pointer;
+        }
+        .sta__i--out {
+            font-size: 15px;
+        }
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:1024px) {
+    .container {
+        max-width: 343px;
+    }
+    .statistics {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        .statistics__title {
+            font-size: 20px;
+            line-height: 24px;
+        }
+        table {
+            thead {
+                tr {
+                    height: 64px;
+                    padding-right: 0;
+                }
+            }
+            tbody {
+                tr {
+                    height: 64px;
+                    padding-right: 0;
+                }
+            }
+            .statistics__mobile,
+            .sta__price--alone,
+            .sta__bad,
+            .sta__good,
+            .sta__sta,
+            .sta__num {
+                display: none !important;
+            }
+        }
+    }
+}

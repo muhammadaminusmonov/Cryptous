@@ -1,12 +1,8 @@
-.bg-color {
-    @include bg-color;
-}
-
 .header__bg {
     @include background-img;
     background-image: url(../../images/bg.png);
     width: 100%;
-    height: 700px;
+    height: 728px;
     .header__bg-img {
         position: absolute;
         top: 106px;
@@ -62,9 +58,7 @@
             }
             p {
                 margin-top: 10px;
-                font-weight: 400;
-                font-size: 17px;
-                line-height: 28px;
+                @include bg-coloc-p;
             }
             button {
                 margin-top: 32px;
