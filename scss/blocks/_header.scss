@@ -1,0 +1,175 @@
+.bg-color {
+    @include bg-color;
+}
+
+.header__bg {
+    @include background-img;
+    background-image: url(../../images/bg.png);
+    width: 100%;
+    height: 700px;
+    .header__bg-img {
+        position: absolute;
+        top: 106px;
+        left: 0;
+    }
+}
+
+.header {
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 109px;
+    .header__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .header__logo {
+            width: 153.58px;
+            height: 40px;
+        }
+        ul {
+            display: flex;
+            gap: 20px;
+            font-size: 17px;
+            line-height: 24px;
+            font-weight: 400;
+        }
+        button {
+            color: $bgColor-text-color;
+            background-color: unset;
+            width: 152px;
+            height: 47px;
+            border: 2px solid #EB5757;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 17px;
+        }
+        .hamburger {
+            display: none;
+        }
+    }
+    .header__content {
+        display: flex;
+        .header__text-side {
+            display: flex;
+            flex-direction: column;
+            width: 700px;
+            h1 {
+                font-weight: 700;
+                font-size: 59px;
+                line-height: 90px;
+            }
+            p {
+                margin-top: 10px;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 28px;
+            }
+            button {
+                margin-top: 32px;
+                background: $button-color;
+                color: $bgColor-text-color;
+                width: 191px;
+                height: 47px;
+                border-radius: 50px;
+                border: 0;
+                font-weight: 500;
+                font-size: 17px;
+                line-height: 17px;
+            }
+        }
+        .header__img {
+            height: 474.32px;
+        }
+    }
+    .header__scroll {
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:1024px) {
+    .container {
+        max-width: 343px;
+    }
+    .header__bg {
+        background-image: none;
+        height: auto;
+        .header__bg-img {
+            display: none;
+        }
+    }
+    .header {
+        gap: 43px;
+        .header__nav {
+            .header__logo {
+                width: 123.51px;
+                height: 30px;
+            }
+            .ul {
+                display: none;
+            }
+            button {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+                img {
+                    width: 25px;
+                    height: 12.64px;
+                }
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    border-radius: 5px;
+                    z-index: 99;
+                    width: 100vw;
+                    height: 100%;
+                    background-color: green;
+                    padding: 25px 0;
+                    .header__hamburger--li {
+                        color: #EB5757;
+                        font-size: 20px;
+                        margin: 0px 50px;
+                    }
+                    .header__hamburger--li:hover {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .header__content {
+            text-align: center;
+            .header__text-side {
+                align-items: center;
+                h1 {
+                    font-size: 24px;
+                    line-height: 32px;
+                }
+                p {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                button {
+                    margin-top: 20px;
+                    font-size: 14px;
+                    line-height: 17px;
+                    width: 136px;
+                    height: 31px;
+                }
+            }
+            img {
+                display: none;
+            }
+        }
+        .header__scroll {
+            display: none;
+        }
+    }
+}

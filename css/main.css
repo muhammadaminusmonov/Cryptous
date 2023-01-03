@@ -1,0 +1,247 @@
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins-Regular.ttf) format(truetype);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins-Medium.ttf) format(truetype);
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins-SemiBold.ttf) format(truetype);
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins-Bold.ttf) format(truetype);
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 320px) and (max-width: 426px) {
+  .container {
+    max-width: 343px;
+  }
+}
+.bg-color {
+  background-color: #1B004E;
+  color: #ffffff;
+  position: relative;
+}
+
+.header__bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  background-image: url(../../images/bg.png);
+  width: 100%;
+  height: 700px;
+}
+.header__bg .header__bg-img {
+  position: absolute;
+  top: 106px;
+  left: 0;
+}
+
+.header {
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 109px;
+}
+.header .header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .header__nav .header__logo {
+  width: 153.58px;
+  height: 40px;
+}
+.header .header__nav ul {
+  display: flex;
+  gap: 20px;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 400;
+}
+.header .header__nav button {
+  color: #ffffff;
+  background-color: unset;
+  width: 152px;
+  height: 47px;
+  border: 2px solid #EB5757;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 17px;
+}
+.header .header__nav .hamburger {
+  display: none;
+}
+.header .header__content {
+  display: flex;
+}
+.header .header__content .header__text-side {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+}
+.header .header__content .header__text-side h1 {
+  font-weight: 700;
+  font-size: 59px;
+  line-height: 90px;
+}
+.header .header__content .header__text-side p {
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 28px;
+}
+.header .header__content .header__text-side button {
+  margin-top: 32px;
+  background: #EB5757;
+  color: #ffffff;
+  width: 191px;
+  height: 47px;
+  border-radius: 50px;
+  border: 0;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 17px;
+}
+.header .header__content .header__img {
+  height: 474.32px;
+}
+.header .header__scroll {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+  .container {
+    max-width: 343px;
+  }
+  .header__bg {
+    background-image: none;
+    height: auto;
+  }
+  .header__bg .header__bg-img {
+    display: none;
+  }
+  .header {
+    gap: 43px;
+  }
+  .header .header__nav .header__logo {
+    width: 123.51px;
+    height: 30px;
+  }
+  .header .header__nav .ul {
+    display: none;
+  }
+  .header .header__nav button {
+    display: none;
+  }
+  .header .header__nav .hamburger {
+    display: block;
+  }
+  .header .header__nav .hamburger img {
+    width: 25px;
+    height: 12.64px;
+  }
+  .header .header__nav .hamburger ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    z-index: 99;
+    width: 100vw;
+    height: 100%;
+    background-color: green;
+    padding: 25px 0;
+  }
+  .header .header__nav .hamburger ul .header__hamburger--li {
+    color: #EB5757;
+    font-size: 20px;
+    margin: 0px 50px;
+  }
+  .header .header__nav .hamburger ul .header__hamburger--li:hover {
+    color: #fff;
+  }
+  .header .header__content {
+    text-align: center;
+  }
+  .header .header__content .header__text-side {
+    align-items: center;
+  }
+  .header .header__content .header__text-side h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .header .header__content .header__text-side p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .header .header__content .header__text-side button {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 17px;
+    width: 136px;
+    height: 31px;
+  }
+  .header .header__content img {
+    display: none;
+  }
+  .header .header__scroll {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

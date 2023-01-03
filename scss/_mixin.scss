@@ -1,0 +1,16 @@
+@mixin bg-color {
+    background-color: $bg-color;
+    color: $bgColor-text-color;
+    position: relative;
+}
+
+@mixin background-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+@mixin table-tr {
+    display: flex;
+    justify-content: space-between;
+}
