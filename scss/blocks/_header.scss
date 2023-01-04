@@ -90,6 +90,7 @@
         max-width: 343px;
         padding-left: 15px;
         padding-right: 15px;
+        z-index: -1000;
     }
     .header__bg {
         background-image: none;
@@ -113,8 +114,9 @@
                 display: block;
                 font-size: 30px;
                 line-height: 0;
+                z-index: 5000;
                 ul {
-                    display: flex;
+                    display: none;
                     flex-direction: column;
                     position: absolute;
                     top: 0;
@@ -127,6 +129,7 @@
                     padding: 25px 0;
                     animation-name: header__hamburger;
                     animation-iteration-count: 1;
+                    animation-duration: .5s;
                     animation-timing-function: ease;
                     .header__hamburger--li {
                         color: #ffffff;
@@ -146,10 +149,8 @@
                     }
                 }
             }
-            .header__hamburger:hover {
-                .hamburger__ul {
-                    display: flex;
-                }
+            .header__hamburger:hover ul {
+                display: flex;
             }
         }
         .header__content {

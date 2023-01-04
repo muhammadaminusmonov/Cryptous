@@ -99,7 +99,6 @@ img {
 .header__bg {
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: -1;
   background-image: url(../../images/bg.png);
   width: 100%;
   height: 728px;
@@ -192,6 +191,7 @@ img {
     max-width: 343px;
     padding-left: 15px;
     padding-right: 15px;
+    z-index: -1000;
   }
   .header__bg {
     background-image: none;
@@ -215,9 +215,10 @@ img {
     display: block;
     font-size: 30px;
     line-height: 0;
+    z-index: 5000;
   }
   .header .header__nav .header__hamburger ul {
-    display: flex;
+    display: none;
     flex-direction: column;
     position: absolute;
     top: 0;
@@ -230,6 +231,7 @@ img {
     padding: 25px 0;
     animation-name: header__hamburger;
     animation-iteration-count: 1;
+    animation-duration: 0.5s;
     animation-timing-function: ease;
   }
   .header .header__nav .header__hamburger ul .header__hamburger--li {
@@ -248,7 +250,7 @@ img {
       transform: translateX(0);
     }
   }
-  .header .header__nav .header__hamburger:hover .hamburger__ul {
+  .header .header__nav .header__hamburger:hover ul {
     display: flex;
   }
   .header .header__content {
